@@ -1,31 +1,29 @@
-<script setup>
+<script>
 import CardComp from "@/components/CardComp.vue";
+export default {
+  components: { CardComp },
+};
 </script>
 
 <template>
   <header>
-    <navbar>
-      <h1>LOGO</h1>
-      <a href="">Home</a>
-      <a href="">Séries</a>
-      <a href="">Filmes</a>
-      <a href="">Populares</a>
-      <a href="">Listas</a>
-      <a href="">Categorias</a>
-    </navbar>
+    <h1>
+      <a href="">NETPRIME+</a>
+    </h1>
+    <a href="">Séries</a>
+    <a href="">Filmes</a>
+    <a href="">Populares</a>
+    <a href="">Listas</a>
+    <a href="">Categorias</a>
   </header>
   <main>
-    <CardComp />
-    <CardComp />
-    <CardComp />
-    <CardComp />
-    <CardComp />
-    <CardComp />
-    <CardComp />
-
-    <CardComp />
-    <CardComp />
+    <div class="row-pop">
+      <CardComp />
+      <CardComp />
+      <CardComp />
+      <CardComp />
+      <CardComp />
+    </div>
   </main>
 </template>
-
 <style></style>

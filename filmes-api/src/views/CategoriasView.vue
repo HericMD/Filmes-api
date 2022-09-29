@@ -1,2 +1,4 @@
 <script></script>
-<template>Categorias</template>
+<template>
+  <p>Categorias</p>
+</template>

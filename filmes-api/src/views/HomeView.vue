@@ -9,6 +9,9 @@ export default {
   <main>
     <RowsComp />
     <RowsComp />
+    <RowsComp />
+    <RowsComp />
+    <RowsComp />
   </main>
 </template>
 <style></style>

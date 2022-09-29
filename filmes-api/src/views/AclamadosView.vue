@@ -1,2 +1,4 @@
 <script></script>
-<template>Aclamados</template>
+<template>
+  <p>Aclamados</p>
+</template>

@@ -1,2 +1,4 @@
 <script></script>
-<template>Populares</template>
+<template>
+  <p>Populares</p>
+</template>

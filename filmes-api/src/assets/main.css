@@ -3,12 +3,14 @@ body {
   color: white;
 }
 header {
-  background-color: gray;
   padding: 0px 10px 2px;
   margin: 0px 0px 5px 0px;
 }
+header h1 {
+  color: red;
+}
 header a {
-  color: white;
+  color: gray;
   padding: 10px;
 }
 .CardComp {
@@ -21,4 +23,14 @@ header a {
   height: auto;
   width: 98%;
   overflow-y: auto;
+}
+.line {
+  margin: 30px;
+}
+a {
+  text-decoration: none;
+  font-size: 25px;
+}
+header img {
+margin-bottom: -10px;
 }

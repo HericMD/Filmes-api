@@ -1,17 +1,22 @@
 <script>
-import RowsComp from "@/components/RowsComp.vue";
+import { mapStores, mapState, mapActions } from "pinia";
+import { useResultStore } from "@/stores/results";
 export default {
-  components: { RowsComp },
+  async created() {
+    await this.get_results();
+  },
+  computed: {
+    ...mapStores(useResultStore),
+    ...mapState(useResultStore, ["results"]),
+  },
+  methods: {
+    ...mapActions(useResultStore, ["get_results"]),
+  },
 };
 </script>
-
 <template>
-  <main>
-    <RowsComp />
-    <RowsComp />
-    <RowsComp />
-    <RowsComp />
-    <RowsComp />
-  </main>
+  <p v-for="result of results" :key="result.id">
+    {{ result.title }} - {{ result.id }}
+  </p>
 </template>
 <style></style>

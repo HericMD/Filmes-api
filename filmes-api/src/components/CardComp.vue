@@ -8,7 +8,7 @@ import { useCounterStore } from "@/stores/counter";
 export default {
   data() {
     return {
-      id: 1,
+      id: 73,
       tv: {
         image: {},
         rating: {},

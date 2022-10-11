@@ -16,7 +16,10 @@ export default {
 </script>
 <template>
   <p v-for="result of results" :key="result.id">
-    {{ result.title }} - {{ result.id }}
+    {{ result.title }} - {{ result.id }} - {{ result.poster_path }}
+  </p>
+  <p v-for="result of results" :key="result.id">
+    {{ result.poster_path }}
   </p>
 </template>
 <style></style>

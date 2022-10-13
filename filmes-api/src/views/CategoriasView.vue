@@ -1,9 +1,9 @@
 <script>
 import { mapStores, mapState, mapActions } from "pinia";
 import { useGenreStore } from "@/stores/genres";
-import ActionComp from "@/components/ActionComp.vue";
+import MoviesComp from "@/components/MoviesComp.vue";
 export default {
-  components: { ActionComp },
+  components: { MoviesComp },
   async created() {
     await this.get_genres();
   },
@@ -19,9 +19,7 @@ export default {
 <template>
   <p v-for="genre of genres" :key="genre.id">
     <RouterLink to="/">{{ genre.name }} - {{ genre.id }}</RouterLink>
+    <MoviesComp :genre="genre.id" />
   </p>
-  <ActionComp />
 </template>
 <style></style>
-import CardComp from "@/components/CardComp.vue"; export default { components: {
-CardComp }, };

@@ -8,7 +8,7 @@ export default {
   },
   computed: {
     ...mapStores(useMoviesStore),
-    ...mapState(useMoviesStore, ["movies"]),
+    ...mapState(useMoviesStore, ["moviesByGenre"]),
   },
   methods: {
     ...mapActions(useMoviesStore, ["getMoviesByGenre"]),
@@ -16,8 +16,10 @@ export default {
 };
 </script>
 <template>
-  <p v-for="movie of movies" :key="movie.id">
+  <!-- oi -->
+  {{ moviesByGenre(genre) }}
+  <!-- <p v-for="movie of moviesByGenre(movie.id)" :key="movie.id">
     {{ movie.title }} - {{ movie.id }}
-  </p>
+  </p> -->
 </template>
 <style></style>

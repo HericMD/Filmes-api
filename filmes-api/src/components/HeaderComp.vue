@@ -2,6 +2,11 @@
 import { mapStores, mapState, mapActions } from "pinia";
 import { useGenreStore } from "@/stores/genres";
 export default {
+  data() {
+    return {
+      genre_id: "",
+    };
+  },
   async created() {
     await this.get_genres();
   },
@@ -23,12 +28,12 @@ export default {
     <RouterLink to="/filmes">Filmes</RouterLink>
     <RouterLink to="/populares">Populares</RouterLink>
     <RouterLink to="/aclamados">Aclamados</RouterLink>
-    <select v-model="teste">
-      <option value="5">Categorias</option>
-      <option v-for="genre of genres" :key="genre.id" value="1">
-        {{ genre.name }} - {{ genre.id }}
+    <select v-model="genre_id">
+      <option value="teste">Categorias</option>
+      <option v-for="genre of genres" :key="genre.id" :value="genre.id">
+        <a :href="`#genre.id`">{{ genre.name }} - {{ genre.id }}</a>
       </option>
     </select>
-    <p>teste:{{ teste }}</p>
+    <p>id: {{ genre_id }}</p>
   </header>
 </template>

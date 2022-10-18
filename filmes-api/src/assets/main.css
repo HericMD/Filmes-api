@@ -13,10 +13,10 @@ header a {
   color: gray;
   padding: 10px;
 }
-.CardComp {
+.CardComp, .Poster {
   margin: 10px 0px 10px 20px;
 }
-.rows {
+.rows, .row {
   margin-top: 100px;
   padding: 10px 5px;
   display: flex;

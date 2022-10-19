@@ -28,6 +28,7 @@ export default {
     <RouterLink to="/filmes">Filmes</RouterLink>
     <RouterLink to="/populares">Populares</RouterLink>
     <RouterLink to="/aclamados">Aclamados</RouterLink>
+    <RouterLink to="/categorias">Categorias</RouterLink>
     <select v-model="genre_id">
       <option value="teste">Categorias</option>
       <option v-for="genre of genres" :key="genre.id" :value="genre.id">

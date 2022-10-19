@@ -12,8 +12,21 @@ export const useMoviesStore = defineStore("movies", () => {
       results,
     });
   }
-  const moviesByGenre = computed((id) => movies.value.find((m) => m.id === id).results
-  );
+  const moviesByGenre = computed(() => {
+    return (id) => {
+      console.log(id);
+      console.log(movies.value.find((m) => m.id == id).results);
+      return movies.value.find((m) => m.id == id).results;
+    };
+  });
+  const moviesByGenreId = (id) => {
+    console.log(id);
+    const index = movies.value.findIndex((p) => p.id == id);
+    if (index > -1) {
+      return movies.value[index];
+    }
+    return {};
+  };
 
-  return { movies, moviesByGenre, getMoviesByGenre };
+  return { movies, moviesByGenre, moviesByGenreId, getMoviesByGenre };
 });

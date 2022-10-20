@@ -17,6 +17,11 @@ export default {
   methods: {
     ...mapActions(useGenreStore, ["get_genres"]),
   },
+  watch: {
+    genre_id() {
+      window.location.href = `#${this.genre_id}`;
+    },
+  },
 };
 </script>
 <template>
@@ -32,7 +37,7 @@ export default {
     <select v-model="genre_id">
       <option value="teste">Categorias</option>
       <option v-for="genre of genres" :key="genre.id" :value="genre.id">
-        <a :href="`#genre.id`">{{ genre.name }} - {{ genre.id }}</a>
+        {{ genre.name }} - {{ genre.id }}
       </option>
     </select>
     <p>id: {{ genre_id }}</p>

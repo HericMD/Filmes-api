@@ -5,6 +5,7 @@ import FilmesView from "../views/FilmesView.vue";
 import AclamadosView from "../views/AclamadosView.vue";
 import PopularesView from "../views/PopularesView.vue";
 import CategoriasView from "../views/CategoriasView.vue";
+import MovieinfoView from "../views/MovieinfoView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,12 @@ const router = createRouter({
       path: "/categorias",
       name: "categorias",
       component: CategoriasView,
+    },
+    {
+      path: "/movie/:id",
+      name: "movieinfo",
+      component: MovieinfoView,
+      props: true,
     },
   ],
 });

@@ -7,4 +7,10 @@ export default class MoviesAPI {
     );
     return data.results;
   }
+  async getMoviesById(id) {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=c16459acab2e659b5ab1164dbd0cba50&language=pt-BR`
+    );
+    return data.results;
+  }
 }

@@ -27,13 +27,6 @@ export default {
 };
 </script>
 <template>
-  <select v-model="genre_id">
-    <option value="teste">Categorias</option>
-    <option v-for="genre of genres" :key="genre.id" :value="genre.id">
-      {{ genre.name }} - {{ genre.id }}
-    </option>
-  </select>
-  <a href="#16">animação</a>
   <div v-for="genre of genres" :key="genre.id">
     <h1 :id="genre.id">{{ genre.name }} - {{ genre.id }}</h1>
     <MoviesComp :genre="genre.id" />

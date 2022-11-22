@@ -6,6 +6,7 @@ import AclamadosView from "../views/AclamadosView.vue";
 import PopularesView from "../views/PopularesView.vue";
 import CategoriasView from "../views/CategoriasView.vue";
 import MovieinfoView from "../views/MovieinfoView.vue";
+import MoviesbygenreView from "../views/MoviesbygenreView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,12 @@ const router = createRouter({
       path: "/movie/:id",
       name: "movieinfo",
       component: MovieinfoView,
+      props: true,
+    },
+    {
+      path: "/genre/:id",
+      name: "moviebygenre",
+      component: MoviesbygenreView,
       props: true,
     },
   ],

@@ -3,8 +3,16 @@ body {
   color: white;
 }
 header {
-  padding: 0px 10px 2px;
-  margin: 0px 0px 5px 0px;
+  position: fixed;
+  background-color: black;
+  padding: 10px 0px;
+  width: 100%;
+}
+.fixed{
+  position: fixed;
+  margin-left:720px;
+  margin-top: 25px;
+  padding: 7px;
 }
 header h1 {
   color: red;
@@ -13,17 +21,16 @@ header a {
   color: gray;
   padding: 10px;
 }
-.CardComp,
 .Poster {
   margin: 10px 0px 10px 20px;
 }
-.rows,
 .row {
   padding: 10px 5px;
   display: flex;
   height: auto;
   width: 98%;
   overflow-y: auto;
+  margin-bottom: 20px;
 }
 .line {
   margin: 30px;
@@ -47,4 +54,9 @@ header img {
 }
 .infos {
   padding-top: 1px;
+}
+.genre-title{
+  color: white;
+  font-size: 35px;
+  margin: 40px;
 }

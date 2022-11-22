@@ -2,11 +2,6 @@
 import { mapStores, mapState, mapActions } from "pinia";
 import { useGenreStore } from "@/stores/genres";
 export default {
-  data() {
-    return {
-      genre_id: "",
-    };
-  },
   async created() {
     await this.get_genres();
   },
@@ -17,11 +12,6 @@ export default {
   methods: {
     ...mapActions(useGenreStore, ["get_genres"]),
   },
-  watch: {
-    genre_id() {
-      window.location.href = `#${this.genre_id}`;
-    },
-  },
 };
 </script>
 <template>
@@ -29,15 +19,8 @@ export default {
     <RouterLink to="/"
       ><img src="@/assets/img/Logo.png" alt="NetPrime"
     /></RouterLink>
-    <RouterLink to="/filmes">Filmes</RouterLink>
     <RouterLink to="/populares">Populares</RouterLink>
     <RouterLink to="/aclamados">Aclamados</RouterLink>
     <RouterLink to="/categorias">Categorias</RouterLink>
-    <select v-model="genre_id">
-      <option value="teste">Categorias</option>
-      <option v-for="genre of genres" :key="genre.id" :value="genre.id">
-        {{ genre.name }} - {{ genre.id }}
-      </option>
-    </select>
   </header>
 </template>

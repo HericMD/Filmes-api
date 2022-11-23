@@ -7,11 +7,12 @@ header {
   background-color: black;
   padding: 10px 0px;
   width: 100%;
+  margin-top: -21px;
 }
-.fixed{
+.fixed {
   position: fixed;
-  margin-left:720px;
-  margin-top: 25px;
+  margin-left: 720px;
+  margin-top: 7px;
   padding: 7px;
 }
 header h1 {
@@ -45,18 +46,27 @@ header img {
 .movieinfo {
   background: rgb(40, 40, 40);
   padding: 20px;
-  padding-bottom: 500px;
+  padding-top: 50px;
   margin: 30px 50px;
 }
+.poster-info{
+  display: flex;
+}
 .infoimg {
-  float: left;
   padding-right: 20px;
 }
 .infos {
   padding-top: 1px;
 }
-.genre-title{
+.genre-title {
   color: white;
   font-size: 35px;
   margin: 40px;
+}
+.movie-in-block {
+  background-color: rgb(33, 33, 33);
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }

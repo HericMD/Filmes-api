@@ -33,8 +33,8 @@ export default {
       {{ genre.name }} - {{ genre.id }}
     </option>
   </select>
-  <div v-for="genre of genres" :key="genre.id">
-    <h1 :id="genre.id"></h1>
+  <div v-for="genre of genres" :key="genre.id" class="movies">
+    <h1 :id="genre.id" style="padding: 20px"></h1>
     <RouterLink :to="`/genre/${genre.id}`" class="genre-title"
       >{{ genre.name }}
     </RouterLink>

@@ -23,12 +23,13 @@ export default {
 };
 </script>
 <template>
-  <div class="row">
+  <div class="movie-in-block">
     <p v-for="movie of moviesByGenreId(id).results" :key="movie.id">
       <img
         :src="getImgUrl(movie.poster_path)"
         class="poster"
         @click="MostraFilme(movie)"
+        style="margin: 0px 10px"
       />
     </p>
   </div>

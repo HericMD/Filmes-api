@@ -64,9 +64,10 @@ header img {
   margin: 40px;
 }
 .movie-in-block {
-  background-color: rgb(33, 33, 33);
-  width: 90%;
+  justify-content: center;
+  max-width: 90%;
   margin-left: 5%;
   display: flex;
+  block-size: fit-content;
   flex-wrap: wrap;
 }

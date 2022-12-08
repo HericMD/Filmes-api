@@ -24,3 +24,19 @@ export default {
     <RouterLink to="/categorias">Categorias</RouterLink>
   </header>
 </template>
+<style scoped>
+header {
+  position: fixed;
+  background-color: black;
+  padding: 10px 0px;
+  width: 100%;
+  margin-top: -21px;
+}
+header h1 {
+  color: red;
+}
+header a {
+  color: gray;
+  padding: 10px;
+}
+</style>

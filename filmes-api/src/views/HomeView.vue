@@ -35,11 +35,18 @@ export default {
   </select>
   <div v-for="genre of genres" :key="genre.id" class="movies">
     <h1 :id="genre.id" style="padding: 20px"></h1>
-    <RouterLink :to="`/genre/${genre.id}`" class="genre-title"
+    <RouterLink :to="`${genre.id}`" class="genre-title"
       >{{ genre.name }}
     </RouterLink>
 
     <MoviesComp :genre="genre.id" />
   </div>
 </template>
-<style></style>
+<style scoped>
+.fixed {
+  position: fixed;
+  margin-left: 720px;
+  margin-top: 7px;
+  padding: 7px;
+}
+</style>

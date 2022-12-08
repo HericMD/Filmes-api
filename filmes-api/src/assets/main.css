@@ -2,29 +2,7 @@ body {
   background-color: black;
   color: white;
 }
-header {
-  position: fixed;
-  background-color: black;
-  padding: 10px 0px;
-  width: 100%;
-  margin-top: -21px;
-}
-.fixed {
-  position: fixed;
-  margin-left: 720px;
-  margin-top: 7px;
-  padding: 7px;
-}
-header h1 {
-  color: red;
-}
-header a {
-  color: gray;
-  padding: 10px;
-}
-.Poster {
-  margin: 10px 0px 10px 20px;
-}
+
 .row {
   padding: 10px 5px;
   display: flex;
@@ -33,9 +11,6 @@ header a {
   overflow-y: auto;
   margin-bottom: 20px;
 }
-.line {
-  margin: 30px;
-}
 a {
   text-decoration: none;
   font-size: 25px;
@@ -43,12 +18,7 @@ a {
 header img {
   margin-bottom: -10px;
 }
-.movieinfo {
-  background: rgb(40, 40, 40);
-  padding: 20px;
-  padding-top: 50px;
-  margin: 30px 50px;
-}
+
 .poster-info{
   display: flex;
 }

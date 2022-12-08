@@ -30,7 +30,7 @@ const router = createRouter({
       props: true,
     },
     {
-      path: "/genre/:id",
+      path: "/:id",
       name: "moviebygenre",
       component: MoviesbygenreView,
       props: true,

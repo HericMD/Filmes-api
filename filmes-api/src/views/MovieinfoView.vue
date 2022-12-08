@@ -39,3 +39,11 @@ export default {
     </div>
   </div>
 </template>
+<style scoped>
+.movieinfo {
+  background: rgb(40, 40, 40);
+  padding: 20px;
+  padding-top: 40px;
+  margin: 20px 50px;
+}
+</style>

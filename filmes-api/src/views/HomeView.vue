@@ -28,7 +28,7 @@ export default {
 </script>
 <template>
   <select v-model="genre_id" class="fixed">
-    <option value="teste">Categorias</option>
+    <option value="" disabled>Categorias</option>
     <option v-for="genre of genres" :key="genre.id" :value="genre.id">
       {{ genre.name }} - {{ genre.id }}
     </option>

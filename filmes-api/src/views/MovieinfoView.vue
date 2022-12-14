@@ -16,7 +16,7 @@ export default {
       return `https://image.tmdb.org/t/p/w400${poster_path}`;
     },
     mostraGenero(id) {
-      this.$router.push(`filmes-porgenero/${id}`);
+      this.$router.push(`/${id}`);
     },
   },
 };
@@ -34,6 +34,13 @@ export default {
       <div class="infos">
         <p>Duração: {{ movie.runtime }} minutos</p>
         <p>Avaliação: {{ parseFloat(movie.vote_average).toFixed(1) }}</p>
+        <button
+          @click="mostraGenero(genre.id)"
+          v-for="genre of movie.genres"
+          :key="genre.id"
+        >
+          {{ genre.name }}
+        </button>
         <p>Sinopse: {{ movie.overview }}</p>
       </div>
     </div>
@@ -45,5 +52,18 @@ export default {
   padding: 20px;
   padding-top: 40px;
   margin: 20px 50px;
+}
+button {
+  margin: 0px 3px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+button:hover {
+  background-color: blue;
+  border-radius: 5px;
+  transition: all 0.5s;
 }
 </style>

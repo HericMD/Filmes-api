@@ -19,9 +19,9 @@ export default {
     <RouterLink to="/"
       ><img src="@/assets/img/Logo.png" alt="NetPrime"
     /></RouterLink>
-    <RouterLink to="/populares">Populares</RouterLink>
-    <RouterLink to="/aclamados">Aclamados</RouterLink>
-    <RouterLink to="/categorias">Categorias</RouterLink>
+    <RouterLink to="/">Populares</RouterLink>
+    <RouterLink to="/">Aclamados</RouterLink>
+    <RouterLink to="/">Categorias</RouterLink>
   </header>
 </template>
 <style scoped>
